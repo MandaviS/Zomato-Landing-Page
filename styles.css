@@ -35,6 +35,9 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-color:white;
+    box-shadow:0 2px 5px 0 rgba(0,0,0,0.16);
+    height: 100px;
   }
   
   .navbar__brand {
@@ -50,11 +53,17 @@
   }
   .hero__image__container {
     width: 100%;
+    position: relative;
   }
-  
+   
   .hero__image {
     width: 100%;
+    position: absolute;
+    left:10px;
+    bottom: 50px;
+    top: 35px;
   }
+  
   
   .hero__text {
     font-size: 30px;
@@ -135,6 +144,71 @@
     height: 200px;
   }
   
+  .input__form__text{
+    font-size: 50px;
+    color: #1d3557;
+    margin: 20px 20px;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .input__form__description{
+    display: flex;
+    justify-content:center;
+    gap: 10px;
+    align-items: center;
+  }
+  .input__form__main{
+    height: 40px;
+    font-size: 20px;
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  .quote__image__container{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .quote__image{
+    width: 100%;
+    height: 200px;
+    margin-top: 20px;
+    border-radius:10px;
+  }
+
+  .footer__container{
+    background-image: linear-gradient(
+      to right,
+      #ff512f 0%,
+      #dd2476 51%,
+      #ff512f 100%
+    );
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    height: 150px;
+    border-radius: 10px 10px 0px 0px;
+  }
+  
+  .footer__logo{
+     text-align:center;
+     color: white;
+     width: 100%;
+     font-style:italic;
+     font-family:Georgia, 'Times New Roman', Times, serif;
+     font-weight: 500;
+  }
+
+  .footer__list{
+    width: 100%;
+    text-align: left;
+    list-style: none;
+    color: white;
+  }
+
   @media (min-width: 768px) {
     .navbar {
       justify-content: space-between;
@@ -198,13 +272,27 @@
     .restaurants__flex {
       width: 100%;
     }
+    .footer__container{
+      padding: 10px;
+      justify-content: space-evenly;
+    }
+    .footer__logo{
+      font-size: 30px;
+      width: 100%;
+    }
+    .footer__list{
+      margin-right: 60px;
+    }
   }
   
   @media (min-width: 1020px) {
     .container {
       max-width: 900px;
     }
-  
+    .hero__image{
+      right: 25px;;
+    }
+
     .hero__text {
       font-size: 50px;
     }
@@ -220,10 +308,27 @@
     .restaurants__container{
       margin-top: 30px;
     }
+    .footer__container{
+      display: flex;
+   justify-content:space-evenly;
+    padding-right: 150px;
+  }
+   .footer__list{
+     margin-right: 60px;
+   }
   }
   
   @media (min-width: 1400px) {
     .container {
       max-width: 1250px;
     }
+    .footer__container{
+      display: flex;
+      justify-content: space-evenly;
+      padding-right: 150px;
+    }
+    .footer__list{
+      margin-right: 60px;
+    }
+   
   }
